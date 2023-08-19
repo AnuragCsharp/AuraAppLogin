@@ -85,6 +85,7 @@ public class sceneChanger : MonoBehaviour
         arCamera.SetActive(false);
         ARSession.SetActive(false);
         ARSessionOrigin.SetActive(false);
+        pre.changeToNull();
     }
 
     public void ani1()

@@ -13,58 +13,65 @@ public class prefabManager : MonoBehaviour
     public GameObject prefab7;
     public GameObject prefab8;
 
-    public GameObject spawnablePrefab;
+    //public GameObject spawnablePrefab;
+    public ARTapToPlace tap;
 
     public void changePrefab1()
     {
         Debug.Log("changePrefab1");
-        spawnablePrefab = prefab1;
+        tap.spawnablePrefab = prefab1;
     }
 
     public void changePrefab2()
     {
         Debug.Log("changePrefab2");
-        spawnablePrefab = prefab2;
+        tap.spawnablePrefab = prefab2;
     }
 
     public void changePrefab3()
     {
         Debug.Log("changePrefab3");
-        spawnablePrefab = prefab3;
+        tap.spawnablePrefab = prefab3;
     }
 
     public void changePrefab4()
     {
         Debug.Log("changePrefab4");
-        spawnablePrefab = prefab4;
+        tap.spawnablePrefab = prefab4;
     }
 
     public void changePrefab5()
     {
         Debug.Log("changePrefab5");
-        spawnablePrefab = prefab5;
+        tap.spawnablePrefab = prefab5;
     }
 
     public void changePrefab6()
     {
         Debug.Log("changePrefab6");
-        spawnablePrefab = prefab6;
+        tap.spawnablePrefab = prefab6;
     }
 
     public void changePrefab7()
     {
         Debug.Log("changePrefab7");
-        spawnablePrefab = prefab7;
+        tap.spawnablePrefab = prefab7;
     }
 
     public void changePrefab8()
     {
         Debug.Log("changePrefab8");
-        spawnablePrefab = prefab8;
+        tap.spawnablePrefab = prefab8;
     }
 
-    void Start()
+    public void changeToNull()
     {
-        //tap = GameObject.Find("AR Session Origin").GetComponent<ARTapToPlace>();
+        Debug.Log("changeToNull");
+        tap.spawnablePrefab = null;
     }
+
+    /*void Start()
+    {
+        tap = GameObject.Find("AR Session Origin").GetComponent<ARTapToPlace>();
+    }*/
 }

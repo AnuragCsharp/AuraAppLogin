@@ -9,12 +9,12 @@ using UnityEngine.XR.ARSubsystems;
 public class ARTapToPlace : MonoBehaviour
 {
     public GameObject spawnablePrefab;
-    
+
     ARRaycastManager m_arRaycastManager;
     Camera arCam;
     GameObject spawnedObject;
 
-    public Text text;
+    //public Text text;
 
     private bool isPlacingObject = false;
 
@@ -34,7 +34,7 @@ public class ARTapToPlace : MonoBehaviour
 
         isPlacingObject = true;
         spawnedObject = Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity);
-        text.text = "hit";
+        //text.text = "hit";
     }
 
     // Update is called once per frame
@@ -57,7 +57,7 @@ public class ARTapToPlace : MonoBehaviour
                     if (hit.collider.gameObject.tag == "Spawnable")
                     {
                         spawnedObject = hit.collider.gameObject;
-                        text.text = "";
+                        //text.text = null;
                     }
                     else
                     {
@@ -72,6 +72,7 @@ public class ARTapToPlace : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 spawnedObject = null;
+                spawnablePrefab = null;
             }
         }
     }

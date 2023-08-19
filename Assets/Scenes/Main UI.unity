@@ -988,7 +988,7 @@ MonoBehaviour:
   prefab6: {fileID: 8548060566836454092, guid: 601a468c807d984448a77f2eb248d704, type: 3}
   prefab7: {fileID: 3669033686432091065, guid: 706fa93c8c3704e4086743dfa0e09776, type: 3}
   prefab8: {fileID: 3058239816678998225, guid: 40175c184c6c7b34b823e9b05ec3182e, type: 3}
-  spawnablePrefab: {fileID: 1069843073}
+  tap: {fileID: 1994641847}
 --- !u!1 &253680589
 GameObject:
   m_ObjectHideFlags: 0
@@ -6879,7 +6879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1994641847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6892,8 +6892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e98ca42865cbf042833edede06480e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnablePrefab: {fileID: 2043230608106220916, guid: 76005b0dcd6ed9544aa2d96c328fa7f7,
-    type: 3}
+  spawnablePrefab: {fileID: 1069843073}
   text: {fileID: 2093667743}
 --- !u!114 &1994641848
 MonoBehaviour:
