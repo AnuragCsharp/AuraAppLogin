@@ -12,7 +12,7 @@ public class ARTapToPlace : MonoBehaviour
 
     ARRaycastManager m_arRaycastManager;
     Camera arCam;
-    GameObject spawnedObject;
+    public GameObject spawnedObject = null;
 
     //public Text text;
 

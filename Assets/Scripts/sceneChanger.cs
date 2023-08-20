@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.ARFoundation;
 
 // this script checks if a button is pressed and changes the active gamobject canvas accordingly
 public class sceneChanger : MonoBehaviour
@@ -21,6 +22,9 @@ public class sceneChanger : MonoBehaviour
     public TMP_Text aniName;
 
     public prefabManager pre;
+
+    [SerializeField]
+    private ARSession _arSession;
 
     void Start()
     {
@@ -60,7 +64,7 @@ public class sceneChanger : MonoBehaviour
         arCamera.SetActive(true);
         ARSession.SetActive(true);
         ARSessionOrigin.SetActive(true);
-
+        _arSession.enabled = true;
     }
 
     public void changeScene4()
@@ -81,6 +85,9 @@ public class sceneChanger : MonoBehaviour
         arCamera.SetActive(false);
         ARSession.SetActive(false);
         ARSessionOrigin.SetActive(false);
+        _arSession.enabled = false;
+        _arSession.Reset();
+        //reset AR Plane Manager
         pre.changeToNull();
     }
 

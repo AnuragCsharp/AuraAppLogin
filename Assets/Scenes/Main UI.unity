@@ -899,6 +899,7 @@ MonoBehaviour:
   ARSession: {fileID: 2018175151}
   aniName: {fileID: 153176027}
   pre: {fileID: 212786865}
+  _arSession: {fileID: 2018175153}
 --- !u!114 &212786862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6446,7 +6447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1927158379
 MonoBehaviour:
   m_ObjectHideFlags: 0
