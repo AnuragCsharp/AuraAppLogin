@@ -72,7 +72,6 @@ public class ARTapToPlace : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 spawnedObject = null;
-                spawnablePrefab = null;
             }
         }
     }

@@ -48,13 +48,9 @@ public class sceneChanger : MonoBehaviour
         canvas2.SetActive(false);
         canvas3.SetActive(true);
         canvas4.SetActive(false);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
     }
 
-    public void changeScene3()
+    public void startAR()
     {
         canvas1.SetActive(false);
         canvas2.SetActive(false);
@@ -90,112 +86,56 @@ public class sceneChanger : MonoBehaviour
 
     public void ani1()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab1();
         aniName.text = "Anaconda";
     }
 
     public void ani2()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab2();
         aniName.text = "Rhino";
     }
 
     public void ani3()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab3();
         aniName.text = "Elephant";
     }
 
     public void ani4()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab4();
         aniName.text = "Bear";
     }
 
     public void ani5()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab5();
         aniName.text = "Hippo";
     }
 
     public void ani6()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab6();
         aniName.text = "Jaguar";
     }
 
     public void ani7()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab7();
         aniName.text = "Rat";
     }
 
     public void ani8()
     {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
-        mainCamera.SetActive(false);
-        arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
+        startAR();
         pre.changePrefab7();
         aniName.text = "Horn Lizard";
     }
