@@ -68,10 +68,10 @@ public class prefabManager : MonoBehaviour
     public void changeToNull()
     {
         Debug.Log("changeToNull");
-        //Destroy(tap.spawnedObject);
         DestroyImmediate(tap.spawnedObject, true);
-        tap.spawnablePrefab = null;
-        //tap.spawnedObject = null;
+        tap.isPlacingObject = false;
+        tap.spawnedObject = null;
+        //tap.spawnablePrefab = null;
     }
 
     /*void Start()

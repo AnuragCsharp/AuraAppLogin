@@ -10,20 +10,21 @@ public class ARTapToPlace : MonoBehaviour
 {
     public GameObject spawnablePrefab;
 
+    [SerializeField]
     ARRaycastManager m_arRaycastManager;
     Camera arCam;
     public GameObject spawnedObject = null;
 
     //public Text text;
 
-    private bool isPlacingObject = false;
+    public bool isPlacingObject = false;
 
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
 
     void Start()
     {
+        DestroyImmediate(spawnedObject);
         spawnedObject = null;
-        m_arRaycastManager = GetComponent<ARRaycastManager>();
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
     }
 
@@ -33,6 +34,8 @@ public class ARTapToPlace : MonoBehaviour
             return;
 
         isPlacingObject = true;
+        if (spawnedObject != null)
+            Destroy(spawnedObject);
         spawnedObject = Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity);
         //text.text = "hit";
     }
@@ -53,11 +56,9 @@ public class ARTapToPlace : MonoBehaviour
             {
                 if (Physics.Raycast(ray, out hit))
                 {
-                    spawnedObject = hit.collider.gameObject;
                     if (hit.collider.gameObject.tag == "Spawnable")
                     {
                         spawnedObject = hit.collider.gameObject;
-                        //text.text = null;
                     }
                     else
                     {

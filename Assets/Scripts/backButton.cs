@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class backButton : MonoBehaviour
 {
-    sceneChanger scene;
+    public sceneChanger scene;
     public void back()
     {
         //this is giving instance error

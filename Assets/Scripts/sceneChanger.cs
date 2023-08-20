@@ -26,6 +26,12 @@ public class sceneChanger : MonoBehaviour
     [SerializeField]
     private ARSession _arSession;
 
+    [SerializeField]
+    private ARSessionOrigin _arSessionOrigin;
+
+    [SerializeField]
+    private ARPlaneManager _arPlaneManager;
+
     void Start()
     {
         canvas1.SetActive(true);
@@ -65,6 +71,9 @@ public class sceneChanger : MonoBehaviour
         ARSession.SetActive(true);
         ARSessionOrigin.SetActive(true);
         _arSession.enabled = true;
+        _arSessionOrigin.enabled = true;
+        _arPlaneManager.enabled = true;
+        //SceneManager.LoadScene("ARScene");
     }
 
     public void changeScene4()
@@ -82,68 +91,70 @@ public class sceneChanger : MonoBehaviour
         canvas3.SetActive(true);
         canvas4.SetActive(false);
         mainCamera.SetActive(true);
+        pre.changeToNull();
         arCamera.SetActive(false);
         ARSession.SetActive(false);
         ARSessionOrigin.SetActive(false);
         _arSession.enabled = false;
+        _arSessionOrigin.enabled = false;
+        _arPlaneManager.enabled = false;
         _arSession.Reset();
         //reset AR Plane Manager
-        pre.changeToNull();
     }
 
     public void ani1()
     {
-        startAR();
         pre.changePrefab1();
         aniName.text = "Anaconda";
+        startAR();
     }
 
     public void ani2()
     {
-        startAR();
         pre.changePrefab2();
         aniName.text = "Rhino";
+        startAR();
     }
 
     public void ani3()
     {
-        startAR();
         pre.changePrefab3();
         aniName.text = "Elephant";
+        startAR();
     }
 
     public void ani4()
     {
-        startAR();
         pre.changePrefab4();
         aniName.text = "Bear";
+        startAR();
     }
 
     public void ani5()
     {
-        startAR();
         pre.changePrefab5();
         aniName.text = "Hippo";
+        startAR();
     }
 
     public void ani6()
     {
-        startAR();
         pre.changePrefab6();
         aniName.text = "Jaguar";
+        startAR();
     }
 
     public void ani7()
     {
-        startAR();
         pre.changePrefab7();
         aniName.text = "Rat";
+        startAR();
     }
 
     public void ani8()
     {
-        startAR();
-        pre.changePrefab7();
+        pre.changePrefab8();
         aniName.text = "Horn Lizard";
+        startAR();
     }
 }
