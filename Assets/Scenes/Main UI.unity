@@ -902,7 +902,7 @@ MonoBehaviour:
   _arSession: {fileID: 2018175153}
   _arSessionOrigin: {fileID: 1994641850}
   _arPlaneManager: {fileID: 1994641849}
-  _arTapToPlace: {fileID: 0}
+  tap: {fileID: 1994641847}
 --- !u!114 &212786862
 MonoBehaviour:
   m_ObjectHideFlags: 0

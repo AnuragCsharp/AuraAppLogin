@@ -65,14 +65,14 @@ public class prefabManager : MonoBehaviour
         tap.spawnablePrefab = prefab8;
     }
 
-    public void changeToNull()
+    /*public void changeToNull()
     {
         Debug.Log("changeToNull");
         DestroyImmediate(tap.spawnedObject, true);
         tap.isPlacingObject = false;
         tap.spawnedObject = null;
         //tap.spawnablePrefab = null;
-    }
+    }*/
 
     /*void Start()
     {

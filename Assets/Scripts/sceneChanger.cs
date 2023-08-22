@@ -32,6 +32,8 @@ public class sceneChanger : MonoBehaviour
     [SerializeField]
     private ARPlaneManager _arPlaneManager;
 
+    public ARTapToPlace tap;
+
     void Start()
     {
         canvas1.SetActive(true);
@@ -73,6 +75,11 @@ public class sceneChanger : MonoBehaviour
         _arSession.enabled = true;
         _arSessionOrigin.enabled = true;
         _arPlaneManager.enabled = true;
+        tap.enabled = true;
+
+        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
+        xrManagerSettings.InitializeLoaderSync();
+
         //SceneManager.LoadScene("ARScene");
     }
 
@@ -91,7 +98,9 @@ public class sceneChanger : MonoBehaviour
         canvas3.SetActive(true);
         canvas4.SetActive(false);
         mainCamera.SetActive(true);
-        pre.changeToNull();
+        tap.changeToNull();
+        tap.enabled = false;
+        //pre.changeToNull();
         arCamera.SetActive(false);
         ARSession.SetActive(false);
         ARSessionOrigin.SetActive(false);
@@ -99,7 +108,6 @@ public class sceneChanger : MonoBehaviour
         _arSessionOrigin.enabled = false;
         _arPlaneManager.enabled = false;
         _arSession.Reset();
-        //reset AR Plane Manager
     }
 
     public void ani1()

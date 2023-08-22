@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -26,6 +27,23 @@ public class ARTapToPlace : MonoBehaviour
         DestroyImmediate(spawnedObject);
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
+    }
+
+    public void changeToNull()
+    {
+        Debug.Log("changeToNull");
+        DestroyImmediate(spawnedObject, true);
+        isPlacingObject = false;
+        spawnedObject = null;
+        spawnablePrefab = null;
+
+        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
+        xrManagerSettings.DeinitializeLoader();
+        SceneManager.LoadScene("Main UI"); // reload current scene
+        xrManagerSettings.InitializeLoaderSync();
+
+        //close script
+        //Destroy(this);
     }
 
     private void SpawnPrefab(Vector3 spawnPosition)
