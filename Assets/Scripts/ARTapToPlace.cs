@@ -22,6 +22,8 @@ public class ARTapToPlace : MonoBehaviour
 
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
 
+    public sceneChanger sceneChanger;
+
     void Start()
     {
         DestroyImmediate(spawnedObject);
@@ -32,15 +34,17 @@ public class ARTapToPlace : MonoBehaviour
     public void changeToNull()
     {
         Debug.Log("changeToNull");
-        DestroyImmediate(spawnedObject, true);
+        // DestroyImmediate(spawnedObject, true);
         isPlacingObject = false;
-        spawnedObject = null;
-        spawnablePrefab = null;
+        // spawnedObject = null;
+        // spawnablePrefab = null;
 
-        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
-        xrManagerSettings.DeinitializeLoader();
+        // var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
+        // xrManagerSettings.DeinitializeLoader();
+        // xrManagerSettings.StopSubsystems();
         SceneManager.LoadScene("Main UI"); // reload current scene
-        xrManagerSettings.InitializeLoaderSync();
+        sceneChanger.changeScene2();
+        // xrManagerSettings.StartSubsystems();
 
         //close script
         //Destroy(this);
@@ -81,6 +85,12 @@ public class ARTapToPlace : MonoBehaviour
                     else
                     {
                         SpawnPrefab(m_Hits[0].pose.position);
+                        // Hide plane detection visualization here (specific to ARCore).
+                        ARPlaneManager planeManager = FindObjectOfType<ARPlaneManager>();
+                        if (planeManager != null)
+                        {
+                            planeManager.SetTrackablesActive(false);
+                        }
                     }
                 }
             }

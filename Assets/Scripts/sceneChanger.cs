@@ -34,7 +34,7 @@ public class sceneChanger : MonoBehaviour
 
     public ARTapToPlace tap;
 
-    void Start()
+    public void Start()
     {
         canvas1.SetActive(true);
         canvas2.SetActive(false);
@@ -42,8 +42,8 @@ public class sceneChanger : MonoBehaviour
         canvas4.SetActive(false);
         mainCamera.SetActive(true);
         arCamera.SetActive(false);
-        ARSession.SetActive(false);
-        ARSessionOrigin.SetActive(false);
+        // ARSession.SetActive(false);
+        // ARSessionOrigin.SetActive(false);
     }
 
     public void changeScene1()
@@ -52,6 +52,7 @@ public class sceneChanger : MonoBehaviour
         canvas2.SetActive(true);
         canvas3.SetActive(false);
         canvas4.SetActive(false);
+        Debug.Log("changeScene1");
     }
 
     public void changeScene2()
@@ -60,27 +61,28 @@ public class sceneChanger : MonoBehaviour
         canvas2.SetActive(false);
         canvas3.SetActive(true);
         canvas4.SetActive(false);
+        Debug.Log("changeScene2");
     }
 
     public void startAR()
     {
+        // var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
+        // xrManagerSettings.InitializeLoader();
+        // xrManagerSettings.StartSubsystems();
+
         canvas1.SetActive(false);
         canvas2.SetActive(false);
         canvas3.SetActive(false);
         canvas4.SetActive(true);
         mainCamera.SetActive(false);
         arCamera.SetActive(true);
-        ARSession.SetActive(true);
-        ARSessionOrigin.SetActive(true);
-        _arSession.enabled = true;
-        _arSessionOrigin.enabled = true;
-        _arPlaneManager.enabled = true;
-        tap.enabled = true;
-
-        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
-        xrManagerSettings.InitializeLoaderSync();
-
-        //SceneManager.LoadScene("ARScene");
+        // ARSession.SetActive(true);
+        // ARSessionOrigin.SetActive(true);
+        // _arSession.enabled = true;
+        // _arSessionOrigin.enabled = true;
+        // _arPlaneManager.enabled = true;
+        // tap.enabled = true;
+        // SceneManager.LoadScene("ARScene");
     }
 
     public void changeScene4()
@@ -98,16 +100,16 @@ public class sceneChanger : MonoBehaviour
         canvas3.SetActive(true);
         canvas4.SetActive(false);
         mainCamera.SetActive(true);
-        tap.changeToNull();
-        tap.enabled = false;
-        //pre.changeToNull();
         arCamera.SetActive(false);
-        ARSession.SetActive(false);
-        ARSessionOrigin.SetActive(false);
-        _arSession.enabled = false;
-        _arSessionOrigin.enabled = false;
-        _arPlaneManager.enabled = false;
-        _arSession.Reset();
+        tap.changeToNull();
+        // tap.enabled = false;
+        //pre.changeToNull();
+        // ARSession.SetActive(false);
+        // .SetActive(false);
+        // _arSession.enabled = false;
+        // _arSessionOrigin.enabled = false;
+        // _arPlaneManager.enabled = false;
+        // _arSession.Reset();
     }
 
     public void ani1()
