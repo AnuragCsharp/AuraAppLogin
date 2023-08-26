@@ -43,7 +43,7 @@ public class ARTapToPlace : MonoBehaviour
         // xrManagerSettings.DeinitializeLoader();
         // xrManagerSettings.StopSubsystems();
         SceneManager.LoadScene("Main UI"); // reload current scene
-        sceneChanger.changeScene2();
+        // sceneChanger.changeScene2();
         // xrManagerSettings.StartSubsystems();
 
         //close script

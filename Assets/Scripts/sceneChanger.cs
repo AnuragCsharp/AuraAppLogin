@@ -10,8 +10,6 @@ public class sceneChanger : MonoBehaviour
 {
     public GameObject canvas1;
     public GameObject canvas2;
-    public GameObject canvas3;
-    public GameObject canvas4;
 
     public GameObject mainCamera;
     public GameObject arCamera;
@@ -24,12 +22,6 @@ public class sceneChanger : MonoBehaviour
     public prefabManager pre;
 
     [SerializeField]
-    private ARSession _arSession;
-
-    [SerializeField]
-    private ARSessionOrigin _arSessionOrigin;
-
-    [SerializeField]
     private ARPlaneManager _arPlaneManager;
 
     public ARTapToPlace tap;
@@ -38,31 +30,18 @@ public class sceneChanger : MonoBehaviour
     {
         canvas1.SetActive(true);
         canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(false);
         mainCamera.SetActive(true);
         arCamera.SetActive(false);
-        // ARSession.SetActive(false);
-        // ARSessionOrigin.SetActive(false);
+        ARSession.SetActive(false);
+        ARSessionOrigin.SetActive(false);
     }
 
-    public void changeScene1()
+    /*public void changeScene1()
     {
         canvas1.SetActive(false);
         canvas2.SetActive(true);
-        canvas3.SetActive(false);
-        canvas4.SetActive(false);
         Debug.Log("changeScene1");
-    }
-
-    public void changeScene2()
-    {
-        canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(true);
-        canvas4.SetActive(false);
-        Debug.Log("changeScene2");
-    }
+    }*/
 
     public void startAR()
     {
@@ -71,45 +50,28 @@ public class sceneChanger : MonoBehaviour
         // xrManagerSettings.StartSubsystems();
 
         canvas1.SetActive(false);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(true);
+        canvas2.SetActive(true);
         mainCamera.SetActive(false);
         arCamera.SetActive(true);
-        // ARSession.SetActive(true);
-        // ARSessionOrigin.SetActive(true);
-        // _arSession.enabled = true;
-        // _arSessionOrigin.enabled = true;
-        // _arPlaneManager.enabled = true;
-        // tap.enabled = true;
+        ARSession.SetActive(true);
+        ARSessionOrigin.SetActive(true);
+        _arPlaneManager.enabled = true;
+        tap.enabled = true;
         // SceneManager.LoadScene("ARScene");
-    }
-
-    public void changeScene4()
-    {
-        canvas1.SetActive(true);
-        canvas2.SetActive(false);
-        canvas3.SetActive(false);
-        canvas4.SetActive(false);
     }
 
     public void back()
     {
-        canvas1.SetActive(false);
+        canvas1.SetActive(true);
         canvas2.SetActive(false);
-        canvas3.SetActive(true);
-        canvas4.SetActive(false);
         mainCamera.SetActive(true);
         arCamera.SetActive(false);
         tap.changeToNull();
-        // tap.enabled = false;
-        //pre.changeToNull();
-        // ARSession.SetActive(false);
-        // .SetActive(false);
-        // _arSession.enabled = false;
-        // _arSessionOrigin.enabled = false;
-        // _arPlaneManager.enabled = false;
-        // _arSession.Reset();
+        tap.enabled = false;
+        // pre.changeToNull();
+        ARSession.SetActive(false);
+        ARSessionOrigin.SetActive(false);
+        _arPlaneManager.enabled = false;
     }
 
     public void ani1()
