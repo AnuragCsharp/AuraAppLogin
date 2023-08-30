@@ -20,6 +20,8 @@ public class ARTapToPlace : MonoBehaviour
 
     public bool isPlacingObject = false;
 
+    Vector3 poseOriginal;
+
     List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
 
     public sceneChanger sceneChanger;
@@ -54,12 +56,18 @@ public class ARTapToPlace : MonoBehaviour
     {
         if (isPlacingObject)
             return;
-
+        poseOriginal = spawnPosition;
         isPlacingObject = true;
         if (spawnedObject != null)
             Destroy(spawnedObject);
         spawnedObject = Instantiate(spawnablePrefab, spawnPosition, Quaternion.identity);
         //text.text = "hit";
+    }
+
+    public void resetPosition()
+    {
+        spawnedObject.transform.position = poseOriginal;
+        Debug.Log("resetPosition");
     }
 
     // Update is called once per frame
@@ -96,7 +104,9 @@ public class ARTapToPlace : MonoBehaviour
             }
             else if (touch.phase == TouchPhase.Moved && spawnedObject != null)
             {
-                spawnedObject.transform.position = m_Hits[0].pose.position;
+                Vector3 posi = m_Hits[0].pose.position;
+                posi.y = poseOriginal.y;
+                spawnedObject.transform.position = posi;
             }
             if (touch.phase == TouchPhase.Ended)
             {
