@@ -74,8 +74,8 @@ public class ARTapToPlace : MonoBehaviour
     {
         if (spawnedObject != null)
         {
-            spawnedObject.transform.position = poseOriginal;
-            spawnedObject.transform.localScale = scaleOriginal;
+            spawnablePrefab.transform.position = poseOriginal;
+            spawnablePrefab.transform.localScale = scaleOriginal;
         }    
         Debug.Log("Prefab reset");
     }
