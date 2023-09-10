@@ -1520,6 +1520,7 @@ GameObject:
   - component: {fileID: 1614746486599852971}
   - component: {fileID: -2405455396966696104}
   - component: {fileID: 281841157559385994}
+  - component: {fileID: -9154430241372716770}
   m_Layer: 0
   m_Name: Jaguar
   m_TagString: Spawnable
@@ -1619,6 +1620,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-9154430241372716770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8548060566836454092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549ca20c2c6dd5a43936e37208c84975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinValue: -180
+  rotMaxValue: 180
 --- !u!1 &8750378914954972101
 GameObject:
   m_ObjectHideFlags: 0

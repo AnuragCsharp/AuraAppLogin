@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 4020033011053927376}
   - component: {fileID: -7370405491485757777}
   - component: {fileID: -3359721887439681574}
+  - component: {fileID: 6148883680435025421}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Spawnable
@@ -510,6 +511,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6148883680435025421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043230608106220916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549ca20c2c6dd5a43936e37208c84975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinValue: -180
+  rotMaxValue: 180
 --- !u!1 &2194780129540195487
 GameObject:
   m_ObjectHideFlags: 0

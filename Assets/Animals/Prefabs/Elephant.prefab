@@ -941,6 +941,7 @@ GameObject:
   - component: {fileID: 6500436267796748998}
   - component: {fileID: -134089666367477617}
   - component: {fileID: -9133736942580603518}
+  - component: {fileID: 8818414535316873884}
   m_Layer: 0
   m_Name: Elephant
   m_TagString: Spawnable
@@ -1019,6 +1020,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8818414535316873884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872096831389237372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549ca20c2c6dd5a43936e37208c84975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinValue: -180
+  rotMaxValue: 180
 --- !u!1 &5971409304674765512
 GameObject:
   m_ObjectHideFlags: 0

@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 57238704539671275}
   - component: {fileID: 9157005559725292942}
   - component: {fileID: -3633322586446573440}
+  - component: {fileID: -3126754391089543218}
   m_Layer: 0
   m_Name: Rhino
   m_TagString: Spawnable
@@ -1060,6 +1061,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3126754391089543218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176374611702602064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549ca20c2c6dd5a43936e37208c84975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinValue: -180
+  rotMaxValue: 180
 --- !u!1 &6636643252014364688
 GameObject:
   m_ObjectHideFlags: 0

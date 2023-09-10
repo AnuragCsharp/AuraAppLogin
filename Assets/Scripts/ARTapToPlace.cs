@@ -35,7 +35,6 @@ public class ARTapToPlace : MonoBehaviour
         spawnedObject = null;
         arCam = GameObject.Find("AR Camera").GetComponent<Camera>();
     }
-
     public void changeToNull()
     {
         Debug.Log("changeToNull");

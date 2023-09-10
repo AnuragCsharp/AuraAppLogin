@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 3071111939015090430}
   - component: {fileID: 919904131694427928}
   - component: {fileID: -4932414020008414617}
+  - component: {fileID: 114008370296815341}
   m_Layer: 0
   m_Name: Anaconda
   m_TagString: Spawnable
@@ -1025,6 +1026,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &114008370296815341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6281875031107793588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549ca20c2c6dd5a43936e37208c84975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinValue: -180
+  rotMaxValue: 180
 --- !u!1 &6337987138464640528
 GameObject:
   m_ObjectHideFlags: 0

@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 3763826749734019219}
   - component: {fileID: -165001159431747617}
   - component: {fileID: -8426500537604526543}
+  - component: {fileID: -4485006126406240743}
   m_Layer: 0
   m_Name: Horn Lizard
   m_TagString: Spawnable
@@ -1025,6 +1026,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4485006126406240743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3058239816678998225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 549ca20c2c6dd5a43936e37208c84975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinValue: -180
+  rotMaxValue: 180
 --- !u!1 &3229585381042816824
 GameObject:
   m_ObjectHideFlags: 0
