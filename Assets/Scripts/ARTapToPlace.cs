@@ -73,10 +73,11 @@ public class ARTapToPlace : MonoBehaviour
     {
         if (spawnedObject != null)
         {
-            spawnablePrefab.transform.position = poseOriginal;
-            spawnablePrefab.transform.localScale = scaleOriginal;
-        }    
-        Debug.Log("Prefab reset");
+            spawnedObject.transform.position = poseOriginal;
+            spawnedObject.transform.localScale = scaleOriginal;
+            spawnedObject.transform.rotation = Quaternion.identity;
+            Debug.Log("Prefab reset");
+        }
     }
 
     // Update is called once per frame
