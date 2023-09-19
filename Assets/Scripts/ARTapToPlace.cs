@@ -18,10 +18,11 @@ public class ARTapToPlace : MonoBehaviour
     private float initialDistance;
     private Vector3 initialScale;
 
-    //public Text text;
+    public Text text;
 
     Vector3 poseOriginal;
     Vector3 scaleOriginal;
+    Vector3 rotationOriginal;
 
     bool isPlacingObject = false;
 
@@ -61,6 +62,7 @@ public class ARTapToPlace : MonoBehaviour
 
         poseOriginal = spawnPosition;
         scaleOriginal = spawnablePrefab.transform.localScale;
+        rotationOriginal = spawnablePrefab.transform.rotation.eulerAngles;
         isPlacingObject = true;
         if (spawnedObject != null)
             Destroy(spawnedObject);
@@ -73,9 +75,10 @@ public class ARTapToPlace : MonoBehaviour
     {
         if (spawnedObject != null)
         {
-            spawnedObject.transform.position = poseOriginal;
-            spawnedObject.transform.localScale = scaleOriginal;
-            spawnedObject.transform.rotation = Quaternion.identity;
+            DestroyImmediate(spawnedObject);
+            spawnedObject = Instantiate(spawnablePrefab, poseOriginal, Quaternion.Euler(rotationOriginal));
+
+            text.text = "Prefab reset";
             Debug.Log("Prefab reset");
         }
     }
